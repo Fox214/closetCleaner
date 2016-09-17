@@ -1,0 +1,787 @@
+closetCleaner Report:
+=====================
+
+Bloodrain Strap < name slot > sub
+Uk'uxkaj Cap < name slot > head
+Herculean Helm < name slot > head
+Herculean Helm < name slot > head
+Etched Memory < name slot > item
+Hashishin Kavuk < name slot > head
+Perimede Cape < name slot > back
+Mextli Harness < name slot > body
+Luhlaza Bazubands < name slot > hands
+Colada < name slot > sub
+Feast Hose < name slot > legs
+Tamaxchi < name slot > sub
+Jhakri Pigaches +1 < name slot > feet
+Jhakri Cuffs +1 < name slot > hands
+Battlecast Gaiters < name slot > feet
+Ginsen < name slot > ammo
+Psycloth Lappas < name slot > legs
+Plovid Effluvium < name slot > item
+Miasmic Pants < name slot > legs
+Jhakri Robe +1 < name slot > body
+Assim. Jubbah +1 < name slot > body
+Leyline Gloves < name slot > hands
+Whirlpool Mask < name slot > head
+Hashishin Mintan +1 < name slot > body
+Herculean Vest < name slot > body
+Jhakri Coronal +1 < name slot > head
+Iuitl Wristbands < name slot > hands
+Honed Tathlum < name slot > ammo
+Hagondes Pants +1 < name slot > legs
+Luhlaza Jubbah < name slot > body
+Hagondes Coat < name slot > body
+Assim. Charuqs +1 < name slot > feet
+Thur. Chapeau +1 < name slot > head
+Carmine Cuisses < name slot > legs
+Herculean Trousers < name slot > legs
+Lilitu Headpiece < name slot > head
+Herculean Gloves < name slot > hands
+Shihei < name slot > item
+Kindred's Crest < name slot > item
+Silt Pouch < name slot > item
+Copper Voucher < name slot > item
+Eschalixir < name slot > item
+H. Kindred Crest < name slot > item
+Ifritite < name slot > item
+Flame Geode < name slot > item
+Titanite < name slot > item
+Eschalixir < name slot > item
+Homiliary < name slot > ammo
+Chironic Hose < name slot > legs
+Echo Drops < name slot > item
+Niobid Strap < name slot > sub
+Uk'uxkaj Boots < name slot > feet
+Acad. Mortarboard < name slot > head
+Vanya Hood < name slot > head
+Jokushu Chain < name slot > neck
+Etched Memory < name slot > item
+Umuthi Gloves < name slot > hands
+Herculean Boots < name slot > feet
+Tutyr Sabots < name slot > feet
+Amalric Doublet < name slot > body
+Pemphredo Tathlum < name slot > ammo
+Amar Cluster < name slot > ammo
+Luh. Keffiyeh +1 < name slot > head
+Quiahuiz Trousers < name slot > legs
+Genmei Shield < name slot > sub
+Jhakri Slops +1 < name slot > legs
+Mavi Tathlum < name slot > ammo
+Luhlaza Charuqs +1 < name slot > feet
+Mavi Scarf < name slot > neck
+Manibozho Brais < name slot > legs
+Iris < name slot > sub
+Amalric Gages < name slot > hands
+Ghastly Tathlum +1 < name slot > ammo
+Heka's Kalasiris < name slot > body
+Assim. Bazu. +1 < name slot > hands
+Hashishin Tayt +1 < name slot > legs
+Buremte Gloves < name slot > hands
+Mv. Bazubands +2 < name slot > hands
+Mavi Basmak +2 < name slot > feet
+Telchine Gloves < name slot > hands
+Glyphic Doublet < name slot > body
+Unkai Sune-Ate +2 < name slot > feet
+Orblight < name slot > item
+Imperial Standard < name slot > item
+Queller Rod < name slot > sub
+Bookshelf < name slot > item
+Taru Tot Toyset < name slot > item
+San d'Orian Flag < name slot > item
+Jeunoan Flag < name slot > item
+Pan's Horn < name slot > range
+Thur. Tights +1 < name slot > legs
+Meaty Broth < name slot > ammo
+Tantra Tathlum < name slot > ammo
+Glyphic Spats < name slot > legs
+Meg. Jam. +1 < name slot > feet
+Convoker's Horn < name slot > head
+Wzd. Gloves +1 < name slot > hands
+Katana-kazari < name slot > item
+Kaabnax Trousers < name slot > legs
+Geomancy Pants < name slot > legs
+Runeist Bottes < name slot > feet
+Aoidos' Hngrln. +2 < name slot > body
+Valorous Mask < name slot > head
+Fafnir Statue < name slot > item
+Miki. Cuisses < name slot > legs
+Apogee Dalmatica < name slot > body
+Meg. Gloves +1 < name slot > hands
+Cupboard < name slot > item
+Stationery Set < name slot > item
+Shark Gun < name slot > range
+Kabuto-kazari < name slot > item
+Tantra Gaiters +2 < name slot > feet
+Brioso Slippers +1 < name slot > feet
+Wastebasket < name slot > item
+Unkai Kabuto +2 < name slot > head
+Bronze Bed < name slot > item
+Smertrios's Mantle < name slot > back
+Carpenter's Sign < name slot > item
+Koga Sarashi < name slot > waist
+Mel. Crown +2 < name slot > head
+Anchorite's Cyclas < name slot > body
+Cantabank's Horn < name slot > range
+Hagondes Cuffs < name slot > hands
+E♂ Mannequin < name slot > item
+Emicho Hose < name slot > legs
+R. Bamboo Grass < name slot > item
+Bonbori < name slot > item
+Ferine Quijotes +2 < name slot > legs
+Tpl. Gaiters +1 < name slot > feet
+Vihuela < name slot > range
+San d'Orian Tree < name slot > item
+Festival Dolls < name slot > item
+Algol < name slot > main
+Yellow 3D Almirah < name slot > item
+Thur. Boots +1 < name slot > feet
+Goetia Gloves +2 < name slot > hands
+Rog. Armlets +1 < name slot > hands
+Raider's Vest +2 < name slot > body
+Porthos Byrnie < name slot > body
+Eminent Staff < name slot > main
+Bagua Galero < name slot > head
+Syrinx < name slot > range
+Tzacab Grip < name slot > sub
+Akademos < name slot > main
+Adamant. Statue < name slot > item
+Meghanada Visor +1 < name slot > head
+Odyss. Chestplate < name slot > body
+Merlinic Jubbah < name slot > body
+Sulevia's Plate. +1 < name slot > body
+Meg. Chausses +1 < name slot > legs
+Shinobi-Tabi < name slot > item
+Raid. Poulaines +2 < name slot > feet
+Lutian Cape < name slot > back
+Yel. VCS Plaque < name slot > item
+Windurstian Flag < name slot > item
+Bastokan Flag < name slot > item
+Angon < name slot > ammo
+Guild Flyers < name slot > item
+Schellenband < name slot > hands
+Black VCS Plaque < name slot > item
+O. Bronzepiece < name slot > item
+Rem's Tale Ch.10 < name slot > item
+Alliance Shirt < name slot > body
+Brown Doeskin < name slot > item
+Sh.Abjuration: Hd. < name slot > item
+Frgtn. Journey < name slot > item
+Abdhaljs Dye < name slot > item
+Rem's Tale Ch.9 < name slot > item
+Councilor's Garb < name slot > body
+Third Virtue < name slot > item
+Ritualistic Plans < name slot > item
+Frgtn. Thought < name slot > item
+VCS Reg. Card < name slot > item
+Deed of Sensib. < name slot > item
+Rem's Tale Ch.8 < name slot > item
+Daboya < name slot > main
+Bloodshed Plans < name slot > item
+Forgotten Touch < name slot > item
+Soboro Sukehiro < name slot > main
+Maze Tabula R02 < name slot > item
+Rem's Tale Ch.7 < name slot > item
+Glory Crown < name slot > head
+Rem's Tale Ch.6 < name slot > item
+Glittering Yarn < name slot > item
+Forgotten Touch < name slot > item
+Forgotten Step < name slot > item
+Rancor Tank < name slot > item
+Luminion Chip < name slot > item
+Animator < name slot > range
+Rem's Tale Ch.5 < name slot > item
+Primacy Plans < name slot > item
+Silkworm Thread < name slot > item
+Luminian Tissue < name slot > item
+Fifth Virtue < name slot > item
+Kurogane < name slot > item
+H.Q. Phuabo Org. < name slot > item
+Charcoal Cotton < name slot > item
+Fifth Virtue < name slot > item
+Abdhaljs Sap < name slot > item
+H.Q. Phuabo Org. < name slot > item
+Abdhaljs Dust < name slot > item
+Rounsey Wand < name slot > sub
+Forgotten Hope < name slot > item
+Flameshun Cloth < name slot > item
+Frgtn. Journey < name slot > item
+Abdhaljs Thread < name slot > item
+Councilor's Cuffs < name slot > hands
+Rem's Tale Ch.4 < name slot > item
+Luminion Chip < name slot > item
+Euvhi Organ < name slot > item
+Fourth Virtue < name slot > item
+Dragua's Scale < name slot > item
+Tutelary Plans < name slot > item
+Sedna's Tusk < name slot > item
+Deed of Sensib. < name slot > item
+Maze Tabula M01 < name slot > item
+Rem's Tale Ch.1 < name slot > item
+Coiled Yarn < name slot > item
+Kannagi < name slot > sub
+Fourth Virtue < name slot > item
+T. Whiteshell < name slot > item
+Forgotten Step < name slot > item
+Third Virtue < name slot > item
+Luminion Chip < name slot > item
+Fourth Virtue < name slot > item
+Forgotten Step < name slot > item
+Third Virtue < name slot > item
+Third Virtue < name slot > item
+Deed of Sensib. < name slot > item
+NUM1 Byne Bill < name slot > item
+Deed of Sensib. < name slot > item
+Scarlet Odoshi < name slot > item
+Glavoid Shell < name slot > item
+Rem's Tale Ch.9 < name slot > item
+First Virtue < name slot > item
+Rem's Tale Ch.2 < name slot > item
+Orison Earring < name slot > left_ear
+Hawker's Knife +1 < name slot > sub
+Raid. Bonnet +2 < name slot > head
+Hachi. Chain. +1 < name slot > body
+Beckoner's Bracers < name slot > hands
+Nahtirah Trousers < name slot > legs
+Taming Sari < name slot > sub
+Orison Locket < name slot > neck
+Odium < name slot > sub
+Src. Gloves +2 < name slot > hands
+Piety Briault +1 < name slot > body
+Unkai Kote +2 < name slot > hands
+Bagua Tunic +1 < name slot > body
+Terpander < name slot > range
+Odyssean Gauntlets < name slot > hands
+Orison Mitts +2 < name slot > hands
+Scamp's Sollerets < name slot > feet
+Hangaku-no-Yumi < name slot > range
+Mauler's Mantle < name slot > back
+Rog. Poulaines +1 < name slot > feet
+Xaddi Cuisses < name slot > legs
+Orsn. Duckbills +2 < name slot > feet
+Hes. Gloves +1 < name slot > hands
+Quiahuiz Helm < name slot > head
+Ptero. Mail +1 < name slot > body
+Otomi Gloves < name slot > hands
+Regimen Mittens < name slot > hands
+Incantor Stone < name slot > ammo
+Anwig Salade < name slot > head
+Hattori Zukin +1 < name slot > head
+Hizamaru Kote +1 < name slot > hands
+Twilight Knife < name slot > sub
+Ichigohitofuri < name slot > main
+Intarabus's Cape < name slot > back
+Mirke Wardecors < name slot > body
+Twilight Mail < name slot > body
+Summoning Belt < name slot > waist
+Iga Erimaki < name slot > neck
+Valorous Greaves < name slot > feet
+Mochizuki Tekko < name slot > hands
+Goet. Chausses +2 < name slot > legs
+Inyanga Tiara +1 < name slot > head
+Byakko's Haidate < name slot > legs
+Soil Geode < name slot > item
+Claidheamh Soluis < name slot > sub
+Nukumi Manoplas < name slot > hands
+Merlinic Dastanas < name slot > hands
+Rvg. Calligae +2 < name slot > feet
+Holliday < name slot > range
+Wayfarer Circlet < name slot > head
+Linos < name slot > range
+Windy Greens < name slot > ammo
+Amm Greaves < name slot > feet
+Grioavolr < name slot > main
+Khimaira Bonnet < name slot > head
+Orvail Pants +1 < name slot > legs
+Azimuth Coat < name slot > body
+Tantra Gloves +2 < name slot > hands
+Dampener's Torque < name slot > neck
+Apogee Slacks < name slot > legs
+Moepapa Annulet < name slot > left_ring
+Dunna < name slot > range
+Sulevi. Cuisses +1 < name slot > legs
+Pelt. Schyn. +1 < name slot > feet
+Tant. Broth < name slot > ammo
+Gende. Galoshes < name slot > feet
+Glyphic Bracers +1 < name slot > hands
+Hattori Kyahan < name slot > feet
+Respite Cloak < name slot > body
+Ptero. Greaves +1 < name slot > feet
+Raid. Culottes +2 < name slot > legs
+Orison Cap +2 < name slot > head
+Yaoyotl Gloves < name slot > hands
+Mor. Coronal +1 < name slot > head
+Chironic Doublet < name slot > body
+Con. Pigaches +1 < name slot > feet
+Arbatel Loafers < name slot > feet
+Emicho Coronet < name slot > head
+Hattori Ningi < name slot > body
+Scintillating Cape < name slot > back
+Argute M.board < name slot > head
+Umaru < name slot > main
+Shijo < name slot > sub
+Potestas Bomblet < name slot > ammo
+Twilight Cloak < name slot > body
+Combuster < name slot > sub
+Rhapsode's Cape < name slot > back
+Cichol's Mantle < name slot > back
+Mel. Hose +2 < name slot > legs
+Moepapa Ring < name slot > left_ring
+Pelt. Plackart +1 < name slot > body
+Vishap Mail +1 < name slot > body
+Raid. Armlets +2 < name slot > hands
+Langeleik < name slot > range
+Bubbly Broth < name slot > ammo
+Loyalist Sabatons < name slot > feet
+Merlinic Hood < name slot > head
+Nexus Cape < name slot > back
+Tantra Cyclas +2 < name slot > body
+Runeist Coat < name slot > body
+Portafurnace < name slot > neck
+Sulev. Gauntlets +1 < name slot > hands
+Goetia Sabots +2 < name slot > feet
+Mel. Gaiters +2 < name slot > feet
+Nibiru Harp < name slot > range
+Mochi. Chainmail < name slot > body
+Pelt. Cuissots +1 < name slot > legs
+Seraphicaller < name slot > ammo
+Plunderer's Vest < name slot > body
+Eminent Flute < name slot > range
+Mdk. Shalwar +1 < name slot > legs
+Theophany Cap < name slot > head
+Kari. Brayettes +1 < name slot > legs
+Merlinic Crackows < name slot > feet
+Twilight Helm < name slot > head
+Arbatel Bonnet < name slot > head
+Inyanga Shalwar +1 < name slot > legs
+Pel. Vambraces +1 < name slot > hands
+Hattori Tekko < name slot > hands
+Valorous Mail < name slot > body
+Scholar's Pants +1 < name slot > legs
+Argocham. Mantle < name slot > back
+Azimuth Hood +1 < name slot > head
+Bookworm's Cape < name slot > back
+Savant's Treatise < name slot > ammo
+Ferine Ocreae +2 < name slot > feet
+Bidenhander < name slot > main
+Runeist Mitons < name slot > hands
+Arbatel Bracers +1 < name slot > hands
+Otronif Boots < name slot > feet
+Thaumas Nails < name slot > feet
+Limbo Trousers < name slot > legs
+Phorcys Mitts < name slot > hands
+Stout Bonnet < name slot > head
+Guardian Board < name slot > item
+Umuthi Hat < name slot > head
+Azimuth Gloves < name slot > hands
+Hachi. Kyahan +1 < name slot > feet
+Iuitl Vest < name slot > body
+Savant's Gown +2 < name slot > body
+Hlr. Pantaln. +1 < name slot > legs
+Marduk's Tiara < name slot > head
+Caller's Pendant < name slot > neck
+Kaabnax Hat < name slot > head
+Con. Doublet +1 < name slot > body
+Iga Dochugappa < name slot > back
+Hiza. Sune-Ate +1 < name slot > feet
+Keraunos < name slot > main
+Bronze Bullet < name slot > ammo
+Lancer's Pelerine < name slot > back
+Glorious Earring < name slot > left_ear
+Aganoshe < name slot > main
+Orsn. Pantaln. +2 < name slot > legs
+Azimuth Tights < name slot > legs
+Nantosuelta's Cape < name slot > back
+Hizamaru Somen +1 < name slot > head
+Loxotic Mace < name slot > sub
+Evasionist's Cape < name slot > back
+Tantra Crown +2 < name slot > head
+Faith Torque < name slot > neck
+Storage Slip 04 < name slot > item
+Storage Slip 11 < name slot > item
+Apollo's Flute < name slot > range
+Ptero. Armet +1 < name slot > head
+Nantosuelta's Cape < name slot > back
+Storage Slip 02 < name slot > item
+Ankusa Helm < name slot > head
+Storage Slip 19 < name slot > item
+Storage Slip 01 < name slot > item
+Academic's Gown < name slot > body
+Chironic Slippers < name slot > feet
+Pear Crepe < name slot > item
+Geomancy Tunic < name slot > body
+Ferine Cabasset +2 < name slot > head
+Timeworn Talisman < name slot > item
+Grioavolr < name slot > main
+Kanaria < name slot > sub
+Bagua Sandals < name slot > feet
+Rubeus Boots < name slot > feet
+Savas Jawshan < name slot > body
+Mochi. Hakama +1 < name slot > legs
+Carbuncle Mitts < name slot > hands
+Emicho Gambieras < name slot > feet
+Ejekamal Mask < name slot > head
+Otomi Helm < name slot > head
+Mending Cape < name slot > back
+Miki. Breastplate < name slot > body
+Miki. Gauntlets < name slot > hands
+Manabyss Pigaches < name slot > feet
+Vishap Brais +1 < name slot > legs
+Vishap F. G. +1 < name slot > hands
+Bokwus Robe < name slot > body
+Hope Torque < name slot > neck
+Arktoi < name slot > sub
+Bam. Grass Basket < name slot > item
+Tantra Hose +2 < name slot > legs
+Reienkyo < name slot > main
+Orison Bliaud +2 < name slot > body
+Hiza. Hizayoroi +1 < name slot > legs
+Izhiikoh < name slot > sub
+Ogier's Surcoat < name slot > body
+Gungnir < name slot > main
+Ankusa Trousers +1 < name slot > legs
+Ankusa Gloves +1 < name slot > hands
+Phorcys Dirs < name slot > legs
+Goetia Coat +2 < name slot > body
+Inyan. Crackows +1 < name slot > feet
+Count's Garb < name slot > body
+Ferine Gausape +2 < name slot > body
+Storage Slip 14 < name slot > item
+Storage Slip 12 < name slot > item
+Zulfiqar < name slot > main
+Skormoth Mask < name slot > head
+Ares' Cuirass < name slot > body
+Yokaze Mantle < name slot > back
+Achiuchikapu < name slot > sub
+Choral Cannions < name slot > legs
+Hachiya Hatsuburi < name slot > head
+Sulevia's Mask +1 < name slot > head
+Raimitsukane < name slot > sub
+Storage Slip 08 < name slot > item
+Geomancy Galero < name slot > head
+Tpl. Hose +1 < name slot > legs
+Astolfo < name slot > sub
+Demonry Core < name slot > ammo
+Valor. Hose < name slot > legs
+Hagondes Hat < name slot > head
+Tot. Jackcoat +1 < name slot > body
+Merlinic Shalwar < name slot > legs
+Aoidos' Rhing. +2 < name slot > legs
+Killer Shortbow < name slot > range
+Strendu Mantle < name slot > back
+Storage Slip 06 < name slot > item
+Ptero. Fin. G. +1 < name slot > hands
+Plun. Armlets < name slot > hands
+Rvg. Lorica +2 < name slot > body
+Avatara Slops < name slot > legs
+Aoidos' Cothrn. +2 < name slot > feet
+Tethyan Trews +3 < name slot > legs
+Sanjaku-Tenugui < name slot > item
+Ankusa Gaiters +1 < name slot > feet
+Unkai Domaru +2 < name slot > body
+VCS Reg. Card < name slot > item
+Hiza. Haramaki +1 < name slot > body
+Src. Coat +2 < name slot > body
+Glyphic Horn +1 < name slot > head
+Hag. Sabots +1 < name slot > feet
+Idi's Jerkin < name slot > body
+Emicho Haubert < name slot > body
+Anchoret's Mantle < name slot > back
+Neit's Cuffs < name slot > hands
+Diorite < name slot > item
+Trbl. Hatchet < name slot > item
+Iuitl Tights < name slot > legs
+Trbl. Hatchet < name slot > item
+Trbl. Pickaxe < name slot > item
+Gendewitha Spats < name slot > legs
+Hatchet < name slot > item
+Enticer's Pants < name slot > legs
+Eschalixir +2 < name slot > item
+Antitail +1 < name slot > range
+Sickle < name slot > item
+Spae. Coat +1 < name slot > body
+Incarnation Sash < name slot > waist
+Alaunus's Cape < name slot > back
+Otronif Harness < name slot > body
+Piper's Torque < name slot > neck
+Jokushu Haidate < name slot > legs
+Sulev. Leggings +1 < name slot > feet
+Hachiya Tekko < name slot > hands
+Toetapper Mantle < name slot > back
+Linkpearl < name slot > item
+Unkai Haidate +2 < name slot > legs
+Hatxiik < name slot > sub
+Tsoa. Crossbow < name slot > range
+Kumbhakarna < name slot > sub
+Ravager's Mask +2 < name slot > head
+Aoidos' Calot +2 < name slot > head
+Thr. Tomahawk < name slot > ammo
+Ate's Sollerets < name slot > feet
+Neit's Coat < name slot > body
+Idi's Ledelsens < name slot > feet
+Sublime Sushi +1 < name slot > item
+Gunslinger's Cape < name slot > back
+Runeist Bandeau < name slot > head
+Toolbag (Ino) < name slot > item
+Sunflower Seeds < name slot > item
+Peiste Pellets < name slot > item
+Chironic Hat < name slot > head
+Wyvern Mail < name slot > body
+Pedagogy Pants < name slot > legs
+Beckoner's Spats < name slot > legs
+Count's Cuffs < name slot > hands
+Crystal Petrifact < name slot > item
+Skinflayer < name slot > sub
+Yigit Gomlek < name slot > body
+Homam Cosciales < name slot > legs
+Inoshishinofuda < name slot > item
+Peltast's Mezail +1 < name slot > head
+Plun. Culottes < name slot > legs
+Sylvan Bragues +1 < name slot > legs
+Toutatis's Cape < name slot > back
+String Torque < name slot > neck
+Ad. Mnchtte. +2 < name slot > hands
+Aoidos' Matinee < name slot > neck
+Jo.Abjuration: Hd. < name slot > item
+Call. Doublet +2 < name slot > body
+Gelos Earring < name slot > left_ear
+Conveyance Cape < name slot > back
+Ptero. Brais +1 < name slot > legs
+Crepe B. Helene < name slot > item
+Samanisi Cape < name slot > back
+Terminus Earring < name slot > left_ear
+Liminus Earring < name slot > left_ear
+Apaisante < name slot > sub
+Signal Pearl < name slot > left_ear
+Prouesse Ring < name slot > left_ring
+Dragoon's Earring < name slot > left_ear
+Aliyat Chakram < name slot > range
+Chatoyant Staff < name slot > main
+Lancer's Earring < name slot > left_ear
+Cobra Staff < name slot > main
+Fourth Staff < name slot > main
+Ram Staff < name slot > main
+Kgd. Signet Staff < name slot > main
+Apate Ring < name slot > left_ring
+Pashhow Ring < name slot > left_ring
+Homing Ring < name slot > left_ring
+Tavnazian Ring < name slot > left_ring
+Olduum Ring < name slot > left_ring
+Scorpion Ring +1 < name slot > left_ring
+Capacity Ring < name slot > left_ring
+Ark Scythe < name slot > main
+Overbearing Ring < name slot > left_ring
+Excelsis Ring < name slot > left_ring
+Zennaroi Earring < name slot > left_ear
+Alert Ring < name slot > left_ring
+Renaye Ring < name slot > left_ring
+Hetairoi Ring < name slot > left_ring
+Dim. Ring (Holla) < name slot > left_ring
+Barkaro. Earring < name slot > left_ear
+Digni. Earring < name slot > left_ear
+Trainee Burin < name slot > sub
+Musical Earring < name slot > left_ear
+Gondo-Shizunori < name slot > main
+Angel's Ring < name slot > left_ring
+Globidonta Ring < name slot > left_ring
+Warp Cudgel < name slot > sub
+Pitchfork < name slot > main
+Hardwood Katana < name slot > main
+Ephedra Ring < name slot > left_ring
+Moonshade Earring < name slot > left_ear
+Ethereal Earring < name slot > left_ear
+Perception Ring < name slot > left_ring
+Trizek Ring < name slot > left_ring
+Zodiac Ring < name slot > left_ring
+Tjukurrpa Annulet < name slot > left_ring
+Bolelabunga < name slot > sub
+Aoidos' Earring < name slot > left_ear
+Ulthalam's Ring < name slot > left_ring
+Viking Shield < name slot > sub
+Infused Earring < name slot > left_ear
+Warp Ring < name slot > left_ring
+Mavi Earring < name slot > left_ear
+Assuage Earring < name slot > left_ear
+Caliber Ring < name slot > left_ring
+Heartseeker Earring < name slot > left_ear
+Dudgeon Earring < name slot > left_ear
+Psystorm Earring < name slot > left_ear
+Bestas Bane < name slot > range
+Astolfo < name slot > sub
+Steelflash Earring < name slot > left_ear
+Bladeborn Earring < name slot > left_ear
+Cho'j Band < name slot > left_ring
+Aife's Ring < name slot > left_ring
+Brutal Earring < name slot > left_ear
+Facility Ring < name slot > left_ring
+K'ayres Ring < name slot > left_ring
+Suppanomimi < name slot > left_ear
+Friomisi Earring < name slot > left_ear
+Lifestorm Earring < name slot > left_ear
+Diamond Ring < name slot > left_ring
+Behemoth Ring < name slot > left_ring
+Crematio Earring < name slot > left_ear
+Rajas Ring < name slot > left_ring
+Tripudio Earring < name slot > left_ear
+Strendu Ring < name slot > left_ring
+Pratik Earring < name slot > left_ear
+Usonmunku < name slot > sub
+Patricius Ring < name slot > left_ring
+Vengeful Ring < name slot > left_ring
+Epona's Ring < name slot > left_ring
+Pastoralist's Mantle < name slot > back
+Supay Weskit < name slot > body
+Solstice < name slot > sub
+Phorcys Korazin < name slot > body
+Arbatel Pants < name slot > legs
+Hlr. Mitts +1 < name slot > hands
+Inyanga Jubbah +1 < name slot > body
+Vana'clock < name slot > item
+Acad. Loafers < name slot > feet
+Pet Food Theta < name slot > ammo
+Convoker's Spats < name slot > legs
+Azimuth Gaiters < name slot > feet
+Crusher Gauntlets < name slot > hands
+Evans Earring < name slot > left_ear
+Lathi < name slot > main
+Skd. Jambeaux +1 < name slot > feet
+Espiritus < name slot > main
+Vishap Armet +1 < name slot > head
+Chonofuda < name slot > item
+Argute Gown +2 < name slot > body
+Pole Grip < name slot > sub
+Mel. Cyclas +2 < name slot > body
+Desultor Tassets < name slot > legs
+Artsieq Jubbah < name slot > body
+Bagua Mitaines +1 < name slot > hands
+Livid Broth < name slot > ammo
+Shikanofuda < name slot > item
+Buremte Hat < name slot > head
+Hattori Hakama +1 < name slot > legs
+Denali Kecks < name slot > legs
+Rvg. Cuisses +2 < name slot > legs
+Mochi. Hatsuburi < name slot > head
+Emicho Gauntlets < name slot > hands
+Brioso Roundlet < name slot > head
+Vanya Cuffs < name slot > hands
+Sylvan Gapette +2 < name slot > head
+Geo. Mitaines +1 < name slot > hands
+Caller's Pgch. +2 < name slot > feet
+Skullrender < name slot > sub
+Deino Collar < name slot > neck
+Official Reflector < name slot > item
+Rvg. Mufflers +2 < name slot > hands
+Ejekamal Boots < name slot > feet
+Peda. Loafers < name slot > feet
+Otronif Gloves +1 < name slot > hands
+Valorous Mitts < name slot > hands
+Geo. Sandals +1 < name slot > feet
+Kriegsbeil < name slot > sub
+Apogee Crown < name slot > head
+Bagua Pants +1 < name slot > legs
+Ankusa Jackcoat < name slot > body
+Thrace Strap < name slot > sub
+Vox Grip < name slot > sub
+Syl. Glvltte. +2 < name slot > hands
+Helios Gloves < name slot > hands
+Charmer's Merlin < name slot > sub
+Chironic Gloves < name slot > hands
+Beckoner's Horn < name slot > head
+Evoker's Ring < name slot > left_ring
+Nereid Ring < name slot > left_ring
+Runeist Trousers < name slot > legs
+Meg. Cuirie +1 < name slot > body
+Anchorite's Crown < name slot > head
+Takaha Mantle < name slot > back
+Inyan. Dastanas +1 < name slot > hands
+Black Belt < name slot > waist
+Focal Orb < name slot > ammo
+Bihu Cannions < name slot > legs
+Goetia Petasos +2 < name slot > head
+Gavialis Helm < name slot > head
+Yaoyotl Helm < name slot > head
+Legato Dagger < name slot > sub
+Eminent Shield < name slot > sub
+Vishap Greaves +1 < name slot > feet
+Ifritite < name slot > item
+Shango Robe < name slot > body
+Befouled Crown < name slot > head
+Gridarvor < name slot > main
+Eshus < name slot > main
+Homeric Gorget < name slot > neck
+Lugh's Cape < name slot > back
+Danzo Sune-Ate < name slot > feet
+Dredger Hose < name slot > legs
+Maskirova Torque < name slot > neck
+Melic Torque < name slot > neck
+Eschan Stone < name slot > waist
+Carpenter's Gloves < name slot > hands
+Carpenter's Apron < name slot > body
+Trench Tunic < name slot > body
+Midras's Helm +1 < name slot > head
+Maat's Cap < name slot > head
+Sanctity Necklace < name slot > neck
+Lacono Neck. +1 < name slot > neck
+Iqabi Necklace < name slot > neck
+Asperity Necklace < name slot > neck
+Magoraga Beads < name slot > neck
+Love Torque < name slot > neck
+Glassblower's Belt < name slot > waist
+Imbodla Necklace < name slot > neck
+Fotia Gorget < name slot > neck
+Kgd. Stable Collar < name slot > neck
+Chocobo Whistle < name slot > neck
+Flax Sash < name slot > waist
+Wanion Belt < name slot > waist
+Olseni Belt < name slot > waist
+Chaac Belt < name slot > waist
+Fucho-no-Obi < name slot > waist
+Cornflower Cape < name slot > back
+Twilight Belt < name slot > waist
+Fotia Belt < name slot > waist
+Key Ring Belt < name slot > waist
+Lancer's Torque < name slot > neck
+Ganesha's Mala < name slot > neck
+Buquwik Cape < name slot > back
+Toro Cape < name slot > back
+Sarissapho. Belt < name slot > waist
+Grounded Mantle < name slot > back
+Laic Mantle < name slot > back
+Zoran's Belt < name slot > waist
+Updraft Mantle < name slot > back
+Atheling Mantle < name slot > back
+Arciela's Grace +1 < name slot > neck
+Phalaina Locket < name slot > neck
+Oneiros Grip < name slot > sub
+Ferine Necklace < name slot > neck
+Hurch'lan Sash < name slot > waist
+Grapevine Cape < name slot > back
+Twilight Cape < name slot > back
+Pahtli Cape < name slot > back
+Lifestream Cape < name slot > back
+Izdubar Mantle < name slot > back
+Mecisto. Mantle < name slot > back
+Hachirin-no-Obi < name slot > waist
+Yamabuki-no-Obi < name slot > waist
+Rumination Sash < name slot > waist
+Channeler's Stone < name slot > waist
+Nesanica Torque < name slot > neck
+Eddy Necklace < name slot > neck
+Solemnity Cape < name slot > back
+Kumbira Cape < name slot > back
+Luminary Sash < name slot > waist
+Siegel Sash < name slot > waist
+Phalangite Mantle < name slot > back
+Twilight Torque < name slot > neck
+Canny Cape < name slot > back
+Baetyl Pendant < name slot > neck
+Yemaya Belt < name slot > waist
+Carver's Torque < name slot > neck
+Campestres's Cape < name slot > back
+Andartia's Mantle < name slot > back
+Taranus's Cape < name slot > back
+Rosmerta's Cape < name slot > back
+Artio's Mantle < name slot > back
+Bane Cape < name slot > back
+Mephitis Grip < name slot > sub
+Brigantia's Mantle < name slot > back
