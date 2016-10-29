@@ -237,56 +237,6 @@ function include(str)
 	end
 end
 
-function add_to_supersets(j, t)
-	if j == "WAR" then
-		supersets.WAR = t
-	elseif j == "MNK" then
-		supersets.MNK = t 
-	elseif j == "WHM" then
-		supersets.WHM = t
-	elseif j == "BLM" then
-		supersets.BLM = t
-	elseif j == "RDM" then
-		supersets.RDM = t
-	elseif j == "THF" then
-		supersets.THF = t
-	elseif j == "PLD" then
-		supersets.PLD = t
-	elseif j == "DRK" then
-		supersets.DRK = t
-	elseif j == "BST" then
-		supersets.BST = t
-	elseif j == "BRD" then
-		supersets.BRD = t
-	elseif j == "RNG" then
-		supersets.RNG = t
-	elseif j == "SAM" then
-		supersets.SAM = t
-	elseif j == "NIN" then
-		supersets.NIN = t
-	elseif j == "DRG" then
-		supersets.DRG = t
-	elseif j == "SMN" then
-		supersets.SMN = t
-	elseif j == "BLU" then
-		supersets.BLU = t
-	elseif j == "COR" then
-		supersets.COR = t
-	elseif j == "PUP" then
-		supersets.PUP = t
-	elseif j == "DNC" then
-		supersets.DNC = t
-	elseif j == "SCH" then
-		supersets.SCH = t
-	elseif j == "GEO" then
-		supersets.GEO = t
-	elseif j == "RUN" then
-		supersets.RUN = t
-	else
-		print("Unknown job: "..j)
-	end
-end
-
 function export_sets(path)
 	reportName = path..'_sets.txt'
     local f = io.open(reportName,'w+')
@@ -294,28 +244,6 @@ function export_sets(path)
 	f:write('=====================\n\n')
 		
 	supersets = {}
-	supersets.WAR = {}
-	supersets.MNK = {}
-	supersets.WHM = {}
-	supersets.BLM = {}
-	supersets.RDM = {}
-	supersets.THF = {}
-	supersets.PLD = {}
-	supersets.DRK = {}
-	supersets.BST = {}
-	supersets.BRD = {}
-	supersets.RNG = {}
-	supersets.SAM = {}
-	supersets.NIN = {}
-	supersets.DRG = {}
-	supersets.SMN = {}
-	supersets.BLU = {}
-	supersets.COR = {}
-	supersets.PUP = {}
-	supersets.DNC = {}
-	supersets.SCH = {}
-	supersets.GEO = {}
-	supersets.RUN = {}
 	sets = {}
 	info = {}
 	gear = {}
@@ -337,14 +265,12 @@ function export_sets(path)
 		if windower.file_exists(lname) then
 			dofile(lname)
 			init_gear_sets()
-			table.insert(supersets[v], sets)
-			-- add_to_supersets(v, sets)
+			supersets[v] = deepcopy(sets)
 		else
 			if windower.file_exists(sname) then
 				dofile(sname)
 				init_gear_sets()
-				table.insert(supersets[v], sets)
-				-- add_to_supersets(v, sets)
+				supersets[v] = deepcopy(sets)
 			end
 		end
 	end
@@ -371,7 +297,7 @@ function list_sets ( t, f )
                     elseif (type(val)=="string") then
 						f:write("\nval: "..val)
 						if val ~= "" and val ~= "empty" then 
-							if pos == "name" or pos == "main" or pos == "sub" or pos == "ranged" or pos == "ammo" or pos == "head" or pos == "neck" or pos == "left_ear" or pos == "right_ear" or pos == "body" or pos == "hands" or pos == "left_ring" or pos == "right_ring" or pos == "back" or pos == "waist" or pos == "legs" or pos == "feet" then
+							if pos == "name" or pos == "main" or pos == "sub" or pos == "range" or pos == "ammo" or pos == "head" or pos == "neck" or pos == "left_ear" or pos == "right_ear" or pos == "body" or pos == "hands" or pos == "left_ring" or pos == "right_ring" or pos == "back" or pos == "waist" or pos == "legs" or pos == "feet" then
 								if itemsByName[val:lower()] ~= nil then
 									itemid = itemsByName[val:lower()]
 								elseif itemsBylongName[val:lower()] ~= nil then
@@ -503,4 +429,19 @@ function spairs(t, order)
             return keys[i], t[keys[i]]
         end
     end
+end
+
+function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- number, string, boolean, etc
+        copy = orig
+    end
+    return copy
 end

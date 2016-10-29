@@ -1,40 +1,30 @@
-Author: Byrth
+Author: Brimstone
 
-Version: 0.910
+addon: closetCleaner
 
-Date: 12/08/2015
+This addon is used in conjuction with gearswap to help find unneeded gear, all the include files are copies of those from the gearswap
+addon except for closetCleaner.lua and ccConfig.lua
 
-GearSwap
+ccConfig should be setup, you will need to list your jobs that you actively play and keep gear for. You can also setup ignore lists so 
+things like furniture, food, ninja tools, meds, helm items etc... are not tallied. You may also specify a max item count to limit the size of the report
+as well as skip entire bags when searching current gear. 
 
-Abbreviation: gs
+To use this addon download and create a folder called closetCleaner in you .../Windower4/addons directory. This will look for files named
+either <playername>_<job>.lua or <job>.lua in ../gearswap/data directory (only those specified in the ccjobs list)
 
-Commands (<> indicates a field. You do not actually have to use <>s):
-* gs c <string> : Passes the <string> to the self_command() user function.
-* gs equip <string> : Attempts to interpret the <string> as an index of the sets table and equip that set. Will ignore "sets" if the string starts with it.
-** gs equip naked : This equips the default set "naked," which is just a bunch of empty slots. If you remake sets (sets={}) in your get_sets(), this will not work.
-* gs debugmode : Activates GearSwap's Debug Mode, which prints out why specific gear equipping attempts failed, shows you when you're entering events, and enables the eval command.
-** gs eval <string> : This command evaluates the <string> as Lua code in the global gearswap environment (not the user environment, which is in the user_env table). It is only available when debugmode is on.
-* gs showswaps : Shows when your gear successfully changes and what it changes to.
-* gs load <string> : (or l <string>) Attempts to load the first version of <string> found, assuming it is a file path relative to 9 potential base directories, in this order:
-** ..GearSwap/libs-dev/<string>
-** ..GearSwap/libs/<string>
-** GearSwap/data/<character_name>/<string>
-** GearSwap/data/common/<string>
-** GearSwap/data/<string>
-** APPDATA/Windower/GearSwap/<character_name>/<string>
-** APPDATA/Windower/GearSwap/common/<string>
-** APPDATA/Windower/GearSwap/<string>
-** ..Windower/addons/libs/<string>
-* gs reload : Reloads the current user file.
-* gs export <options> : Exports your currently equipped gear, inventory, or all the items in your current Lua files' sets into GearSwap .lua or spellcast .xml format. Takes options "inventory", "sets", and "xml." Defaults to currently equipped gear and lua otherwise. Also exports appropriate advanced set tables with augments for currently equipped gear and inventory.
-* gs enable <slot> : Enables equip commands targeting a specified slot. "All" will allow all equip commands. Providing no slot argument will enable user GearSwap file execution, if it was disabled.
-* gs disable <slot> : Disables equip commands targeting a given slot. "All" will prevent all equip commands. Providing no second argument will disable user GearSwap file execution, although registered events will still run.
-* gs validate <sets|inv> <filter> : This command checks to see whether the equipment in the sets table also exists in your inventory (default), or (by passing "inv") whether the equipment in your inventory exists in your sets table. <filter> is an optional list of words that restricts the output to only those items that contain text from one of the filter's words.
+It will tally up all the gear inside the init_gear_sets() function which are in the 'sets' tables. If you have sets defined elsewhere it will not be counted, if you have
+sets defined in tables which are not in the 'sets' table space it will not be recognized. It only looks for items where the table key matches a slot 
+(ie head, back, waist etc...) if you have aliased augmented items make sure the variable is defined inside init_gear_sets(). Setting one table name equal 
+to another will cause a stack overflow (ie sets.A = sets.B crashes however sets.A = set_combine(sets.B, {}) will work) 
 
-Purpose: To assist in the micromanaging of equipment!
+Output report should be: .../Windower4/closetCleaner/report/<playername>_report.txt
 
-Settings Files:  
-There is no settings file for GearSwap.
+To use simply type: //lua l closetCleaner
+Then: //cc report
 
-Additional Assistance:
-The Windower/addons/GearSwap/beta_examples_and_information folder has a file in it named Variables.xlsx that gives more specific information. If that is insufficient, you can go to BlueGartr's FFXI section or FFXIAH and ask for more assistance.
+If you change the config file, you'll need to //lua r closetCleaner, if you only change your <job>.lua files you can just rerun //cc report
+
+Known issues:
+1. it will not process include files  (except for organizer-lib)
+2. it will not process gear outside the scope mentioned above (I'd like to fix this once some of these other limitations are handled)
+3. it will not handle windower.raw_register_event statements (just comment them out before running //cc report)
