@@ -14,10 +14,10 @@ ccignore = { "Rem's Tale*", "Storage Slip %d+", "Deed of*", "%a+ Virtue", "Dragu
 			"%a+'s Sign", "%a+'s Apron", "Toolbag .*", "%a+ Crepe", "%a+ Sushi.*", ".* Stable Collar", "Plovid Effluvium",
 			"Gem of the %a+", "Inoshishinofuda", "Ichigohitofuri", "Chonofuda", "Shikanofuda", "Shihei", "Midras\'s Helm \+1", "Cobra Staff", "Ram Staff", "Fourth Staff",
 			"Warp Ring", "Chocobo Whistle", "Warp Cudgel", "%a+ Broth", "Tavnazian Ring", "Official Reflector",
-			"Pashhow Ring", "Dredger Hose", "Trench Tunic", "Sanjaku-Tenugui", "Katana-kazari", "Sanjaku-Tenugui",
-			"Carver's Torque", "Kabuto-kazari", "Etched Memory", "Trbl. Hatchet", "Maat's Cap", "Trbl. Pickaxe",
+			"Pashhow Ring", "Dredger Hose", "Trench Tunic", "Sanjaku.Tenugui", "Katana.kazari", "Sanjaku.Tenugui",
+			"Carver's Torque", "Kabuto.kazari", "Etched Memory", "Trbl. Hatchet", "Maat's Cap", "Trbl. Pickaxe",
 			"Olduum Ring", "Linkpearl", "Caliber Ring", "Vana'clock", "Signal Pearl", "Windy Greens", "Nexus Cape",
-			"Wastebasket", "Sickle", "Carpenter's Gloves", "Shinobi-Tabi"
+			"Wastebasket", "Sickle", "Carpenter's Gloves", "Shinobi.Tabi"
 			}
 -- This is the most use of an item you want to show up in the report
 -- Set to nil or delete for unlimited

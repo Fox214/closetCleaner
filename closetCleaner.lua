@@ -260,18 +260,28 @@ function export_sets(path)
 	gspath = fpath:gsub('closetCleaner\/','')..'gearswap/'
 	dpath = gspath..'data/'
 	for i,v in ipairs(ccjobs) do
-		lname = dpath..player.name..'_'..v..'.lua'
-		sname = dpath..v..'.lua'
-		if windower.file_exists(lname) then
+		lname = string.lower(dpath..player.name..'_'..v..'.lua')
+		lgname = string.lower(dpath..player.name..'_'..v..'_gear.lua')
+		sname = string.lower(dpath..v..'.lua')
+		sgname = string.lower(dpath..v..'_gear.lua')
+		if windower.file_exists(lgname) then
+			dofile(lgname)
+			init_gear_sets()
+			supersets[v] = deepcopy(sets)
+		elseif windower.file_exists(lname) then
 			dofile(lname)
 			init_gear_sets()
 			supersets[v] = deepcopy(sets)
+		elseif windower.file_exists(sgname) then
+			dofile(sgname)
+			init_gear_sets()
+			supersets[v] = deepcopy(sets)
+		elseif windower.file_exists(sname) then
+			dofile(sname)
+			init_gear_sets()
+			supersets[v] = deepcopy(sets)
 		else
-			if windower.file_exists(sname) then
-				dofile(sname)
-				init_gear_sets()
-				supersets[v] = deepcopy(sets)
-			end
+		   print('lua file for '..v..' not found!')
 		end
 	end
 	
