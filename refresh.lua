@@ -60,8 +60,7 @@ end
 ---- variables.
 -----------------------------------------------------------------------------------
 function load_user_files(job_id,user_file)
-    job_id = tonumber(job_id)
-    
+    -- job_id = tonumber(job_id)
     if current_file then
         user_pcall('file_unload',current_file)
     end
@@ -89,22 +88,23 @@ function load_user_files(job_id,user_file)
     language = 'english' -- Reset language to english when changing job files.
     refresh_globals()
     
-    if job_id and res.jobs[job_id] then
-        player.main_job_id = job_id
-        update_job_names()
-    end
+    -- if job_id and res.jobs[job_id] then
+        -- player.main_job_id = job_id
+        -- update_job_names()
+    -- end
     
     
     local path,base_dir,filename
     path,base_dir,filename = pathsearch({user_file})
-    if not path then
-        local long_job = res.jobs[job_id].english
-        local short_job = res.jobs[job_id].english_short
-        local tab = {player.name..'_'..short_job..'.lua',player.name..'-'..short_job..'.lua',
-            player.name..'_'..long_job..'.lua',player.name..'-'..long_job..'.lua',
-            player.name..'.lua',short_job..'.lua',long_job..'.lua','default.lua'}
-        path,base_dir,filename = pathsearch(tab)
-    end
+    -- if not path then
+	-- print ('got here'..job_id)
+        -- local long_job = res.jobs[job_id].english
+        -- local short_job = res.jobs[job_id].english_short
+        -- local tab = {player.name..'_'..short_job..'.lua',player.name..'-'..short_job..'.lua',
+            -- player.name..'_'..long_job..'.lua',player.name..'-'..long_job..'.lua',
+            -- player.name..'.lua',short_job..'.lua',long_job..'.lua','default.lua'}
+        -- path,base_dir,filename = pathsearch(tab)
+    -- end
     
     if not path then
         current_file = nil

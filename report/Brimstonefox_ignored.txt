@@ -1,0 +1,102 @@
+closetCleaner ignored Report:
+=====================
+
+                  Name |   Count |          Location |                                                 Long Name | 
+---------------------- | ------- | ----------------- | --------------------------------------------------------- | 
+           P. NIN Card |       0 |              Case |                                        paragon ninja card | 
+       Reraise Earring |       0 |          Wardrobe |                                           reraise earring | 
+         Katana-kazari |       0 |              Safe |                                             katana-kazari | 
+          Pashhow Ring |       0 |          Wardrobe |                                      Recall ring: Pashhow | 
+           P. DRG Card |       0 |              Case |                                      paragon dragoon card | 
+              Orblight |       0 |              Safe |                                                  orblight | 
+     Yellow 3D Almirah |       0 |              Safe |                                   yellow 3-drawer almirah | 
+         Fafnir Statue |       0 |              Safe |                                             Fafnir statue | 
+         Toolbag (Ino) |       0 |              Case |                                 toolbag (inoshishinofuda) | 
+             Bookshelf |       0 |              Safe |                                                 bookshelf | 
+          Fourth Staff |       0 |          Wardrobe |                                              Fourth staff | 
+       Storage Slip 19 |       0 |              Sack |                                    moogle storage slip 19 | 
+          Bubbly Broth |       0 |              Sack |                                       jug of bubbly broth | 
+       Storage Slip 04 |       0 |              Sack |                                    moogle storage slip 04 | 
+       Storage Slip 02 |       0 |              Sack |                                    moogle storage slip 02 | 
+      Sublime Sushi +1 |       0 |              Case |                                 plate of sublime sushi +1 | 
+         Trbl. Pickaxe |       0 |              Case |                                      trailblazing pickaxe | 
+          Shinobi-Tabi |       0 |            Safe 2 |                                              shinobi-tabi | 
+     Kgd. Signet Staff |       0 |          Wardrobe |                                      Kingdom Signet staff | 
+                Shihei |       0 |         Inventory |                                                    shihei | 
+       Toolbag (Shihe) |       0 |              Case |                                          toolbag (shihei) | 
+           Olduum Ring |       0 |          Wardrobe |                                               Olduum ring | 
+    Jo.Abjuration: Lg. |       0 |              Case |                                   jovian abjuration: legs | 
+          Mahogany Bed |       0 |              Safe |                                              mahogany bed | 
+      Gem of the South |       0 |              Case |                                          gem of the south | 
+      Black VCS Plaque |       0 |              Safe |                                          black VCS plaque | 
+      San d'Orian Flag |       0 |              Safe |                                          San d'Orian flag | 
+               Bonbori |       0 |              Safe |                                                   bonbori | 
+      Windurstian Flag |       0 |              Safe |                                          Windurstian flag | 
+          Jeunoan Flag |       0 |              Safe |                                              Jeunoan flag | 
+            Goblin Pie |       0 |              Case |                                                Goblin pie | 
+      San d'Orian Tree |       0 |              Safe |                                  San d'Orian holiday tree | 
+          Portafurnace |       0 |           Satchel |                                              portafurnace | 
+          Caliber Ring |       0 |          Wardrobe |                                              caliber ring | 
+          Guild Flyers |       0 |              Safe |                                       set of guild flyers | 
+        Guardian Board |       0 |              Safe |                                            guardian board | 
+             Ram Staff |       0 |          Wardrobe |                                                 Ram staff | 
+       Inoshishinofuda |       0 |              Case |                                           inoshishinofuda | 
+         Trbl. Hatchet |       0 |        Case, Case |                                      trailblazing hatchet | 
+             Warp Ring |       0 |          Wardrobe |                                                 warp ring | 
+           Homing Ring |       0 |          Wardrobe |                                               homing ring | 
+       Storage Slip 11 |       0 |              Sack |                                    moogle storage slip 11 | 
+       Adamant. Statue |       0 |              Safe |                                        adamantoise statue | 
+       R. Bamboo Grass |       0 |              Safe |                                 sprig of red bamboo grass | 
+       Storage Slip 08 |       0 |              Sack |                                    moogle storage slip 08 | 
+           Cobra Staff |       0 |          Wardrobe |                                               Cobra staff | 
+       Taru Tot Toyset |       0 |              Safe |                                           Taru tot toyset | 
+              Cupboard |       0 |              Safe |                                                  cupboard | 
+         Etched Memory |       0 |         Inventory |                                             etched memory | 
+       Storage Slip 06 |       0 |              Sack |                                    moogle storage slip 06 | 
+     Carpenter's Apron |       0 |        Wardrobe 2 |                                         carpenter's apron | 
+          Signal Pearl |       0 |          Wardrobe |                                              signal pearl | 
+      Plovid Effluvium |       0 |         Inventory |                                  vial of plovid effluvium | 
+          Trench Tunic |       0 |        Wardrobe 2 |                                              trench tunic | 
+           Wastebasket |       0 |              Safe |                                               wastebasket | 
+           Squid Sushi |       0 |            Locker |                                      plate of squid sushi | 
+         Kabuto-kazari |       0 |              Safe |                                             kabuto-kazari | 
+           Shikanofuda |       0 |              Sack |                                               shikanofuda | 
+           P. GEO Card |       0 |              Case |                                    paragon geomancer card | 
+          Dredger Hose |       0 |        Wardrobe 2 |                                              dredger hose | 
+    Kgd. Stable Collar |       0 |        Wardrobe 2 |                                    Kingdom stables collar | 
+         Facility Ring |       0 |          Wardrobe |                                             facility ring | 
+        Festival Dolls |       0 |              Safe |                                     set of festival dolls | 
+        Stationery Set |       0 |              Safe |                                            stationery set | 
+       Carver's Torque |       0 |        Wardrobe 2 |                                           carver's torque | 
+      Midras's Helm +1 |       0 |        Wardrobe 2 |                                          Midras's helm +1 | 
+    Jo.Abjuration: Ft. |       0 |              Case |                                   jovian abjuration: feet | 
+            Nexus Cape |       0 |           Satchel |                                                nexus cape | 
+        E♂ Mannequin |       0 |              Safe |                                      Elvaan ♂ mannequin | 
+       Chocobo Whistle |       0 |        Wardrobe 2 |                                           chocobo whistle | 
+             Linkpearl |       0 |              Case |                                                 linkpearl | 
+         Capacity Ring |       0 |          Wardrobe |                                             capacity ring | 
+    Official Reflector |       0 |            Safe 2 |                                   official soul reflector | 
+            Maat's Cap |       0 |        Wardrobe 2 |                                                Maat's cap | 
+            Vana'clock |       0 |            Safe 2 |                                                Vana'clock | 
+          Windy Greens |       0 |            Locker |                                   handful of windy greens | 
+        Tavnazian Ring |       0 |          Wardrobe |                                            Tavnazian ring | 
+           Trizek Ring |       0 |          Wardrobe |                                               trizek ring | 
+                Sickle |       0 |              Case |                                                    sickle | 
+       Storage Slip 14 |       0 |              Sack |                                    moogle storage slip 14 | 
+       Sanjaku-Tenugui |       0 |              Sack |                                           sanjaku-tenugui | 
+    Carpenter's Gloves |       0 |        Wardrobe 2 |                                        carpenter's gloves | 
+     Dim. Ring (Holla) |       0 |          Wardrobe |                                  dimensional ring (Holla) | 
+       Storage Slip 12 |       0 |              Sack |                                    moogle storage slip 12 | 
+     Imperial Standard |       0 |              Safe |                                         Imperial standard | 
+       Storage Slip 01 |       0 |              Sack |                                    moogle storage slip 01 | 
+      Carpenter's Sign |       0 |              Safe |                                     carpenter's signboard | 
+             Chonofuda |       0 |            Safe 2 |                                                 chonofuda | 
+           P. BRD Card |       0 |              Case |                                         paragon bard card | 
+       Yel. VCS Plaque |       0 |              Safe |                                         yellow VCS plaque | 
+            Pear Crepe |       0 |            Safe 2 |                                                pear crepe | 
+     Bam. Grass Basket |       0 |              Sack |                                       bamboo grass basket | 
+         Bastokan Flag |       0 |              Safe |                                             Bastokan flag | 
+        Pet Food Theta |       1 | Locker, Satchel, Sack |                                    Pet Food Theta biscuit | 
+       Mecisto. Mantle |       8 |        Wardrobe 2 |                                        mecistopins mantle | 
+        Ichigohitofuri |      11 |              Sack |                                            ichigohitofuri | 
+           Warp Cudgel |      70 |          Wardrobe |                                               Warp cudgel | 

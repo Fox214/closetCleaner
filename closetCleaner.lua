@@ -1,5 +1,5 @@
 _addon.name = 'closetCleaner'
-_addon.version = '0'
+_addon.version = '0.5'
 _addon.author = 'Brimstone'
 _addon.commands = {'cc','closetCleaner'}
 
@@ -85,7 +85,8 @@ extdata = require 'extdata'
 require 'helper_functions'
 require 'actions'
 packets = require 'packets'
-
+gearswap = {}
+user_env = {}
 -- Resources Checks
 if res.items and res.bags and res.slots and res.statuses and res.jobs and res.elements and res.skills and res.buffs and res.spells and res.job_abilities and res.weapon_skills and res.monster_abilities and res.action_messages and res.skills and res.monstrosity and res.weather and res.moon_phases and res.races then
 else
@@ -103,7 +104,7 @@ require 'validate'
 require 'flow'
 require 'triggers'
 
-initialize_packet_parsing()
+-- initialize_packet_parsing()
 gearswap_disabled = false
 
 windower.register_event('load',function()
@@ -229,11 +230,38 @@ function export_inv(path)
 	print("File created: "..reportName)
 end
 
--- Dummy include function
-function include(str)
+-- Dummy include function, ignore some search known paths for others
+function include(f)
 	-- No need to do anything with this
-	if str == 'organizer-lib.lua' then
+	if f == 'organizer-lib.lua' then
 		return
+	end
+	if windower.file_exists(f) then
+		dofile(f)
+		return
+	end
+	if windower.file_exists(gspath..f) then
+		dofile(gspath..f)
+		return
+	end
+	mf = gearswap.pathsearch({f})
+	if mf then
+		if windower.file_exists(mf) then
+			dofile(mf)
+			return
+		end
+	end
+	libsFiles = { "Modes", "Mote-Include.lua", "Mote-TreasureHunter", "Mote-Mappings", "Mote-Utility", "Mote-Globals", "Mote-SelfCommands"}
+	for i,s in ipairs(libsFiles) do
+		if s == f then
+			incFile = gspath.."libs/"..f
+			if windower.file_exists(incFile) then
+				dofile(incFile)
+			else
+				dofile(incFile..".lua")
+			end
+			return
+		end
 	end
 end
 
@@ -247,13 +275,7 @@ function export_sets(path)
 	sets = {}
 	info = {}
 	gear = {}
-	sets.precast = {}
-	sets.midcast = {}
-	sets.precast.Pet = {}
-	sets.midcast.Pet = {}
-	sets.precast.JA = {}
-	sets.defense = {}
-	sets.buff = {}
+	gearswap.res = res
 	
 	fpath = windower.addon_path:gsub('\\','/')
 	fpath = fpath:gsub('//','/')
@@ -278,7 +300,8 @@ function export_sets(path)
 			supersets[v] = deepcopy(sets)
 		elseif windower.file_exists(sname) then
 			dofile(sname)
-			init_gear_sets()
+			-- init_gear_sets()
+			get_sets()
 			supersets[v] = deepcopy(sets)
 		else
 		   print('lua file for '..v..' not found!')
@@ -307,7 +330,7 @@ function list_sets ( t, f )
                     elseif (type(val)=="string") then
 						f:write("\nval: "..val)
 						if val ~= "" and val ~= "empty" then 
-							if pos == "name" or pos == "main" or pos == "sub" or pos == "range" or pos == "ammo" or pos == "head" or pos == "neck" or pos == "left_ear" or pos == "right_ear" or pos == "body" or pos == "hands" or pos == "left_ring" or pos == "right_ring" or pos == "back" or pos == "waist" or pos == "legs" or pos == "feet" then
+							if pos == "name" or pos == "main" or pos == "sub" or pos == "range" or pos == "ammo" or pos == "head" or pos == "neck" or pos == "left_ear" or pos == "right_ear" or pos == "body" or pos == "hands" or pos == "left_ring" or pos == "right_ring" or pos == "back" or pos == "waist" or pos == "legs" or pos == "feet" or pos == "ear1" or pos == "ear2" or pos == "ring1" or pos == "ring2" then
 								if itemsByName[val:lower()] ~= nil then
 									itemid = itemsByName[val:lower()]
 								elseif itemsBylongName[val:lower()] ~= nil then
@@ -454,4 +477,70 @@ function deepcopy(orig)
         copy = orig
     end
     return copy
+end
+
+function gearswap.pathsearch(files_list)
+
+    -- base directory search order:
+    -- windower
+    -- %appdata%/Windower/GearSwap
+    
+    -- sub directory search order:
+    -- libs-dev (only in windower addon path)
+    -- libs (only in windower addon path)
+    -- data/player.name
+    -- data/common
+    -- data
+    
+    local gearswap_data = gspath .. 'data/'
+    local gearswap_appdata = (os.getenv('APPDATA') or '') .. '/Windower/GearSwap/'
+
+    local search_path = {
+        [1] = gspath .. 'libs-dev/',
+        [2] = gspath .. 'libs/',
+        [3] = gearswap_data .. player.name .. '/',
+        [4] = gearswap_data .. 'common/',
+        [5] = gearswap_data,
+        [6] = gearswap_appdata .. player.name .. '/',
+        [7] = gearswap_appdata .. 'common/',
+        [8] = gearswap_appdata,
+        [9] = windower.windower_path .. 'addons/libs/'
+    }
+    
+    local user_path
+    local normal_path
+
+    for _,basepath in ipairs(search_path) do
+        if windower.dir_exists(basepath) then
+            for i,v in ipairs(files_list) do
+                if v ~= '' then
+                    if include_user_path then
+                        user_path = basepath .. include_user_path .. '/' .. v
+                    end
+                    normal_path = basepath .. v
+                    
+                    if user_path and windower.file_exists(user_path) then
+                        return user_path,basepath,v
+                    elseif normal_path and windower.file_exists(normal_path) then
+                        return normal_path,basepath,v
+                    end
+                end
+            end
+        end
+    end
+    
+    return false
+end
+
+--dummy functions
+function send_command(c)
+	windower.send_command(c)
+end
+
+function windower.register_event(c)
+	return
+end
+
+function windower.raw_register_event(c)
+	return
 end
