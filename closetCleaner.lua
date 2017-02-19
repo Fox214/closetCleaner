@@ -1,5 +1,5 @@
 _addon.name = 'closetCleaner'
-_addon.version = '0.5'
+_addon.version = '0.6'
 _addon.author = 'Brimstone'
 _addon.commands = {'cc','closetCleaner'}
 
@@ -279,7 +279,8 @@ function export_sets(path)
 	
 	fpath = windower.addon_path:gsub('\\','/')
 	fpath = fpath:gsub('//','/')
-	gspath = fpath:gsub('closetCleaner\/','')..'gearswap/'
+	fpath = string.lower(fpath)
+	gspath = fpath:gsub('closetcleaner\/','')..'gearswap/'
 	dpath = gspath..'data/'
 	for i,v in ipairs(ccjobs) do
 		lname = string.lower(dpath..player.name..'_'..v..'.lua')
@@ -288,20 +289,43 @@ function export_sets(path)
 		sgname = string.lower(dpath..v..'_gear.lua')
 		if windower.file_exists(lgname) then
 			dofile(lgname)
-			init_gear_sets()
+			if get_sets ~= nil then
+				get_sets()
+			elseif init_gear_sets ~= nil then
+				init_gear_sets()
+			else
+				print('ERROR: init_gear_sets() or get_sets() not found!')
+			end
 			supersets[v] = deepcopy(sets)
 		elseif windower.file_exists(lname) then
 			dofile(lname)
-			init_gear_sets()
+			if get_sets ~= nil then
+				get_sets()
+			elseif init_gear_sets ~= nil then
+				init_gear_sets()
+			else
+				print('ERROR: init_gear_sets() or get_sets() not found!')
+			end
 			supersets[v] = deepcopy(sets)
 		elseif windower.file_exists(sgname) then
 			dofile(sgname)
-			init_gear_sets()
+			if get_sets ~= nil then
+				get_sets()
+			elseif init_gear_sets ~= nil then
+				init_gear_sets()
+			else
+				print('ERROR: init_gear_sets() or get_sets() not found!')
+			end
 			supersets[v] = deepcopy(sets)
 		elseif windower.file_exists(sname) then
 			dofile(sname)
-			-- init_gear_sets()
-			get_sets()
+			if get_sets ~= nil then
+				get_sets()
+			elseif init_gear_sets ~= nil then
+				init_gear_sets()
+			else
+				print('ERROR: init_gear_sets() or get_sets() not found!')
+			end
 			supersets[v] = deepcopy(sets)
 		else
 		   print('lua file for '..v..' not found!')
@@ -330,7 +354,7 @@ function list_sets ( t, f )
                     elseif (type(val)=="string") then
 						f:write("\nval: "..val)
 						if val ~= "" and val ~= "empty" then 
-							if pos == "name" or pos == "main" or pos == "sub" or pos == "range" or pos == "ammo" or pos == "head" or pos == "neck" or pos == "left_ear" or pos == "right_ear" or pos == "body" or pos == "hands" or pos == "left_ring" or pos == "right_ring" or pos == "back" or pos == "waist" or pos == "legs" or pos == "feet" or pos == "ear1" or pos == "ear2" or pos == "ring1" or pos == "ring2" then
+							if S{"name", "main", "sub", "range", "ammo", "head", "neck", "left_ear", "right_ear", "body", "hands", "left_ring", "right_ring", "back", "waist", "legs", "feet", "ear1", "ear2", "ring1", "ring2", "lear", "rear", "lring", "rring"}:contains(pos) then
 								if itemsByName[val:lower()] ~= nil then
 									itemid = itemsByName[val:lower()]
 								elseif itemsBylongName[val:lower()] ~= nil then

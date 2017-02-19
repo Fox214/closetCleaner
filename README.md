@@ -9,10 +9,10 @@ ccConfig needs to be configured. You will need to list your jobs that you active
 things like furniture, food, ninja tools, meds, helm items etc... are not tallied. You may also specify a max item count to limit the size of the report
 as well as skip entire bags when searching current gear. 
 
-To use this addon download and create a folder called closetCleaner in you .../Windower4/addons directory. This will look for files named
-either <playername>_<job>.lua or <job>.lua in ../gearswap/data directory (only those specified in the ccjobs list)
+To use this addon download and create a folder called closetCleaner in your .../Windower4/addons directory. This will look for files named
+either <playername>_<job>.lua or <job>.lua (also _gear.lua versions) in ../gearswap/data directory (only those specified in the ccjobs list)
 
-It will tally up all the gear inside the get_sets() function which are in the 'sets' tables (will work recursively). If you have sets defined elsewhere it will not be counted, if you have
+It will tally up all the gear inside the get_sets() (if using Mote's)  or init_gear_sets() function which are in the 'sets' tables (will work recursively). If you have sets defined elsewhere it will not be counted, if you have
 sets defined in tables which are not in the 'sets' table space it will not be recognized. It only looks for items where the table key matches a slot 
 (ie head, back, waist etc...) if you have aliased augmented items make sure the variable is defined inside get_sets(). Setting one table name equal 
 to another will cause a stack overflow (ie sets.A = sets.B crashes however sets.A = set_combine(sets.B, {}) will work) 
