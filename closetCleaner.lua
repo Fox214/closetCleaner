@@ -1,5 +1,5 @@
 _addon.name = 'closetCleaner'
-_addon.version = '0.6'
+_addon.version = '0.7'
 _addon.author = 'Brimstone'
 _addon.commands = {'cc','closetCleaner'}
 
@@ -159,49 +159,30 @@ windower.register_event('addon command',function (...)
 		itemsByName[res.items[k].en:lower()] = k
 	end
     
-	require 'ccConfig'
-    if cmd == 'inv' then
-        export_inv(path)
-    elseif cmd == 'sets' then
-        export_sets(path)
-    elseif cmd == 'report' then
+	-- require 'ccConfig'
+    if cmd == 'report' then
+		require 'ccConfig'
         run_report(path)
     elseif strip(cmd) == 'help' then
         print('closetCleaner: Valid commands are:')
-        print(' inv   : Exports all items in inventory to closetCleaner/report/<playername>_inventory.txt.')
-        print(' sets  : Exports all items gearswap/<job>.lua files to closetCleaner/report/<playername>_sets.txt.')
         print(' report  : Generates full usage report closetCleaner/report/<playername>_report.txt.')
     else
-        local handled = false
-        if not gearswap_disabled then
-            for i,v in ipairs(unhandled_command_events) do
-                handled = equip_sets(v,nil,cmd,unpack(splitup))
-                if handled then break end
-            end
-        end
-        if not handled then
-            print('checkusage: Command not found')
-        end
+		print('checkusage: Command not found')
     end
 end)
 
 function export_inv(path)
-    reportName = path..'_inventory.txt'
-    local f = io.open(reportName,'w+')
-	f:write('closetCleaner Inventory Report:\n')
-	f:write('=====================\n\n')
+	if ccDebug then
+		reportName = path..'_inventory.txt'
+		finv = io.open(reportName,'w+')
+		finv:write('closetCleaner Inventory Report:\n')
+		finv:write('=====================\n\n')
+	end
 		
 	local item_list = T{}
 	checkbag = true 
 	for n = 0, #res.bags do
-		for i,v in ipairs(skipBags) do
-			if res.bags[n].english == v then
-				checkbag = false
-			else	
-				checkbag = true
-			end
-		end
-		if checkbag then 
+		if not skipBags:contains(res.bags[n].english) then
 			for i,v in ipairs(get_item_list(items[res.bags[n].english:gsub(' ', ''):lower()])) do
 				if v.name ~= empty then
 					local slot = xmlify(tostring(v.slot))
@@ -214,9 +195,9 @@ function export_inv(path)
 					else
 						print("Item: "..name.." not found in resources!")
 					end
-					f:write("Name: "..name.." Slot: "..slot.." Bag: "..res.bags[n].english.."\n")
-					-- f:write(name.." id: "..itemid.."\n")
-					-- f:write(name.."\n")
+					if ccDebug then
+						finv:write("Name: "..name.." Slot: "..slot.." Bag: "..res.bags[n].english.."\n")
+					end
 					if inventoryGear[itemid] == nil then 
 						inventoryGear[itemid] = res.bags[n].english
 					else
@@ -226,8 +207,10 @@ function export_inv(path)
 			end
 		end
 	end
-	f:close()
-	print("File created: "..reportName)
+	if ccDebug then
+		finv:close()
+		print("File created: "..reportName)
+	end
 end
 
 -- Dummy include function, ignore some search known paths for others
@@ -265,14 +248,30 @@ function include(f)
 	end
 end
 
+-- sets the 'sets' and puts them into supersets based off file name. 
+function extract_sets(file) 
+	dofile(file)
+	if get_sets ~= nil then
+		get_sets()
+	elseif init_gear_sets ~= nil then
+		init_gear_sets()
+	else
+		print('ERROR: init_gear_sets() or get_sets() not found!')
+	end
+	return deepcopy(sets)
+end
+
 function export_sets(path)
-	reportName = path..'_sets.txt'
-    local f = io.open(reportName,'w+')
-	f:write('closetCleaner sets Report:\n')
-	f:write('=====================\n\n')
+	if ccDebug then
+		reportName = path..'_sets.txt'
+		fsets = io.open(reportName,'w+')
+		fsets:write('closetCleaner sets Report:\n')
+		fsets:write('=====================\n\n')
+	end
 		
 	supersets = {}
-	sets = {}
+	job_used = T{}
+	job_logged = T()
 	info = {}
 	gear = {}
 	gearswap.res = res
@@ -283,143 +282,121 @@ function export_sets(path)
 	gspath = fpath:gsub('closetcleaner\/','')..'gearswap/'
 	dpath = gspath..'data/'
 	for i,v in ipairs(ccjobs) do
+		sets = {}
 		lname = string.lower(dpath..player.name..'_'..v..'.lua')
 		lgname = string.lower(dpath..player.name..'_'..v..'_gear.lua')
 		sname = string.lower(dpath..v..'.lua')
 		sgname = string.lower(dpath..v..'_gear.lua')
 		if windower.file_exists(lgname) then
-			dofile(lgname)
-			if get_sets ~= nil then
-				get_sets()
-			elseif init_gear_sets ~= nil then
-				init_gear_sets()
-			else
-				print('ERROR: init_gear_sets() or get_sets() not found!')
-			end
-			supersets[v] = deepcopy(sets)
+			supersets[v] = extract_sets(lgname)
 		elseif windower.file_exists(lname) then
-			dofile(lname)
-			if get_sets ~= nil then
-				get_sets()
-			elseif init_gear_sets ~= nil then
-				init_gear_sets()
-			else
-				print('ERROR: init_gear_sets() or get_sets() not found!')
-			end
-			supersets[v] = deepcopy(sets)
+			supersets[v] = extract_sets(lname)
 		elseif windower.file_exists(sgname) then
-			dofile(sgname)
-			if get_sets ~= nil then
-				get_sets()
-			elseif init_gear_sets ~= nil then
-				init_gear_sets()
-			else
-				print('ERROR: init_gear_sets() or get_sets() not found!')
-			end
-			supersets[v] = deepcopy(sets)
+			supersets[v] = extract_sets(sgname)
 		elseif windower.file_exists(sname) then
-			dofile(sname)
-			if get_sets ~= nil then
-				get_sets()
-			elseif init_gear_sets ~= nil then
-				init_gear_sets()
-			else
-				print('ERROR: init_gear_sets() or get_sets() not found!')
-			end
-			supersets[v] = deepcopy(sets)
+			supersets[v] = extract_sets(sname)
 		else
 		   print('lua file for '..v..' not found!')
 		end
 	end
 	
-	list_sets( supersets , f ) 
- 	f:close()
-	print("File created: "..reportName)
+	list_sets( supersets , fsets ) 
+	if ccDebug then
+		fsets:close()
+		print("File created: "..reportName)
+	end
 end
 
 function list_sets ( t, f )  
 	write_sets = T{}
 	local print_r_cache={}
-    local function sub_print_r(t,indent)
-        if (print_r_cache[tostring(t)]) then
-            -- f:write(indent.."*"..tostring(t))
-        else
-            print_r_cache[tostring(t)]=true
-            if (type(t)=="table") then
-                for pos,val in pairs(t) do
-                    if (type(val)=="table") then
-                        -- f:write(indent.."["..pos.."] => "..tostring(t).." {")
-                        sub_print_r(val,indent..string.rep(" ",string.len(pos)+8))
-                        -- f:write(indent..string.rep(" ",string.len(pos)+6).."}")
-                    elseif (type(val)=="string") then
-						f:write("\nval: "..val)
-						if val ~= "" and val ~= "empty" then 
-							if S{"name", "main", "sub", "range", "ammo", "head", "neck", "left_ear", "right_ear", "body", "hands", "left_ring", "right_ring", "back", "waist", "legs", "feet", "ear1", "ear2", "ring1", "ring2", "lear", "rear", "lring", "rring"}:contains(pos) then
-								if itemsByName[val:lower()] ~= nil then
-									itemid = itemsByName[val:lower()]
-								elseif itemsBylongName[val:lower()] ~= nil then
-									itemid = itemsBylongName[val:lower()]
+    local function sub_print_r(t,fromTab)
+		if (type(t)=="table") then
+			for pos,val in pairs(t) do
+				if S{"WAR", "MNK", "WHM", "BLM", "RDM", "THF", "PLD", "DRK", "BST", "BRD", "RNG", "SAM", "NIN", "DRG", "SMN", "BLU", "COR", "PUP", "DNC", "SCH", "GEO", "RUN"}:contains(pos) then
+					job = pos
+				end
+				if (type(val)=="table") then
+					sub_print_r(val,job)
+				elseif (type(val)=="string") then
+					if val ~= "" and val ~= "empty" then 
+						if S{"name", "main", "sub", "range", "ammo", "head", "neck", "left_ear", "right_ear", "body", "hands", "left_ring", "right_ring", "back", "waist", "legs", "feet", "ear1", "ear2", "ring1", "ring2", "lear", "rear", "lring", "rring"}:contains(pos) then
+							if itemsByName[val:lower()] ~= nil then
+								itemid = itemsByName[val:lower()]
+							elseif itemsBylongName[val:lower()] ~= nil then
+								itemid = itemsBylongName[val:lower()]
+							else
+								print("Item: '"..val.."' not found in resources! "..pos)
+							end
+							if write_sets[itemid] == nil then
+								write_sets[itemid] = 1
+								if job_used[itemid] == nil then
+									job_used[itemid] = job
+									job_logged[itemid..job] = 1
 								else
-									print("Item: '"..val.."' not found in resources! "..pos)
+									job_used[itemid] = job_used[itemid]..","..job
+									job_logged[itemid..job] = 1
 								end
-								if write_sets[itemid] == nil then
-									write_sets[itemid] = 1
-								else	
-									write_sets[itemid] = write_sets[itemid] + 1
+							else	
+								write_sets[itemid] = write_sets[itemid] + 1
+								if job_logged[itemid..job] == nil then
+									job_used[itemid] = job_used[itemid]..","..job
+									job_logged[itemid..job] = 1
 								end
 							end
 						end
-                    else
-                        print("Error: Val needs to be table or string")
-                    end
-                end
-            end
-        end
+					end
+				else
+					print("Error: Val needs to be table or string")
+				end
+			end
+		end
     end
-    sub_print_r(t,"  ")
-	data = T{"Name", "Count", "Long Name"}
-	form = T{"%22s", "%10s", "%60s"}
-	print_row(f, data, form)
-	print_break(f, form)
-	f:write('\n')
-	for k,v in pairs(write_sets) do
-		data = T{res.items[k].en, tostring(v), res.items[k].enl}
+    sub_print_r(t,nil)
+	if ccDebug then
+		data = T{"Name", " | ", "Count", " | ", "Jobs", " | ", "Long Name"}
+		form = T{"%22s", "%3s", "%10s", "%3s", "%88s", "%3s", "%60s"}
 		print_row(f, data, form)
-		gsGear[k] = v
+		print_break(f, form)
+		f:write('\n')
+		for k,v in pairs(write_sets) do
+			data = T{res.items[k].en, " | ", tostring(v), " | ", job_used[k], " | ", res.items[k].enl}
+			print_row(f, data, form)
+			gsGear[k] = v
+		end
+		f:write()
+	else
+		for k,v in pairs(write_sets) do
+			gsGear[k] = v
+		end
 	end
-    f:write()
 end
 
 -- pass in file handle and a table of formats and table of data
 function print_row(f, data, form)
 	for k,v in pairs(data) do
-		f:write(string.format(form[k], v..' | '))
+		f:write(string.format(form[k], v))
 	end
 	f:write('\n')
 end
 
 -- pass in file handle and a table of formats and table of data
--- Subtract 3 because above the column break is included in the format 
 function print_break(f, form)
 	for k,v in pairs(form) do
 		number = string.match(v,"%d+")
-		for i=1,number-3 do
+		for i=1,number do
 			f:write('-')
 		end
-		f:write(' | ')
+		-- f:write(' ') -- can add characters to end here like spaces but subtract from number in the for loop above
 	end
 	f:write('\n')
 end
 
 function run_report(path)
 	mainReportName = path..'_report.txt'
-	ignoredReportName = path..'_ignored.txt'
-    local f = io.open(mainReportName,'w+')
-    local f2 = io.open(ignoredReportName,'w+')
+	local f = io.open(mainReportName,'w+')
 	f:write('closetCleaner Report:\n')
 	f:write('=====================\n\n')
-	f2:write('closetCleaner ignored Report:\n')
-	f2:write('=====================\n\n')
 	export_inv(path)
 	export_sets(path)
 	for k,v in pairs(inventoryGear) do
@@ -427,42 +404,54 @@ function run_report(path)
 			gsGear[k] = 0
 		end
 	end
-	data = T{"Name", "Count", "Location", "Long Name"}
-	form = T{"%25s", "%10s", "%20s", "%60s"}
+	data = T{"Name", " | ", "Count", " | ", "Location", " | ", "Jobs Used", " | ", "Long Name"}
+	form = T{"%25s", "%3s", "%10s", "%3s", "%20s", "%3s", "%-88s", "%3s", "%60s"}
 	print_row(f, data, form)
 	print_break(f, form)
-	print_row(f2, data, form)
-	print_break(f2, form)
-	-- f:write('\n')
+	if ccDebug then
+		ignoredReportName = path..'_ignored.txt'
+		f2 = io.open(ignoredReportName,'w+')
+		f2:write('closetCleaner ignored Report:\n')
+		f2:write('=====================\n\n')
+		print_row(f2, data, form)
+		print_break(f2, form)
+	end
 	for k,v in spairs(gsGear, function(t,a,b) return t[b] > t[a] end) do
 		if ccmaxuse == nil or v <= ccmaxuse then
 			printthis = 1
+			if not job_used[k] then
+				job_used[k] = " "
+			end
 			for i,s in ipairs(ccignore) do
 				if string.match(res.items[k].en, s) or string.match(res.items[k].en, s) then
 					printthis = nil
 					if inventoryGear[k] == nil then
-						data = T{res.items[k].en, tostring(v), "NOT FOUND", res.items[k].enl}
+						data = T{res.items[k].en, " | ", tostring(v), " | ", "NOT FOUND", " | ", job_used[k], " | ", res.items[k].enl}
 					else
-						data = T{res.items[k].en, tostring(v), inventoryGear[k], res.items[k].enl}
+						data = T{res.items[k].en, " | ", tostring(v), " | ", inventoryGear[k], " | ", job_used[k], " | ", res.items[k].enl}
 					end
-					print_row(f2, data, form)
+					if ccDebug then
+						print_row(f2, data, form)
+					end
 					break
 				end 
 			end
 			if printthis then
 				if inventoryGear[k] == nil then
-					data = T{res.items[k].en, tostring(v), "NOT FOUND", res.items[k].enl}
+					data = T{res.items[k].en, " | ", tostring(v), " | ", "NOT FOUND", " | ", job_used[k], " | ", res.items[k].enl}
 				else
-					data = T{res.items[k].en, tostring(v), inventoryGear[k], res.items[k].enl}
+					data = T{res.items[k].en, " | ", tostring(v), " | ", inventoryGear[k], " | ", job_used[k], " | ", res.items[k].enl}
 				end
 				print_row(f, data, form)
 			end
 		end
 	end
+	if ccDebug then
+		f2:close()
+		print("File created: "..ignoredReportName)
+	end
 	f:close()
-	f2:close()
 	print("File created: "..mainReportName)
-	print("File created: "..ignoredReportName)
 end
 
 function spairs(t, order)
@@ -555,6 +544,22 @@ function gearswap.pathsearch(files_list)
     
     return false
 end
+
+-- this function looks recursively through tables for a piece of gear  (currently unused)
+function has_gear(tab, val)
+	for index, value in pairs(tab) do
+		if (type(value)=="table") then
+			depth = depth + 1
+			if has_gear(value, val, f) then
+				return true
+			end
+		elseif value == val then
+			return true
+		end
+	end
+	return false
+end
+
 
 --dummy functions
 function send_command(c)

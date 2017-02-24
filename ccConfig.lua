@@ -23,5 +23,7 @@ ccignore = { "Rem's Tale*", "Storage Slip %d+", "Deed of*", "%a+ Virtue", "Dragu
 -- This is the most use of an item you want to show up in the report
 -- Set to nil or delete for unlimited
 ccmaxuse = nil
--- List bags you want to not check against
-skipBags = { 'Storage' }
+-- List bags you want to not check against, needs to match "Location" column in <player>_report.txt
+skipBags = S{ 'Storage', 'Temporary' }
+-- this prints out the _sets _ignored and _inventory files
+ccDebug = false
